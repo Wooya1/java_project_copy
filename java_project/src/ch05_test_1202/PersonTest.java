@@ -7,11 +7,12 @@ public class PersonTest {
 		  lsy.name = "조민우";
 		  lsy.height = 176F;
 		  lsy.weight = 102F;
-		  
+		  lsy.shwoInfo();
 		  
 		  Person lsy2 = new Person("조민우");
 		  lsy.height = 176F;
 		  lsy.weight = 102F;
+		  lsy.shwoInfo();
 		  
 		  
 		  
