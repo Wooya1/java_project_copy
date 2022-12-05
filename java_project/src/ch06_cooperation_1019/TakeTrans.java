@@ -18,7 +18,7 @@ public class TakeTrans {
 		Student lsystudent3 = new Student("조민우",50000);
 		
 		kakaoTaxi kakaotaxi = new kakaoTaxi(561909);
-		System.out.println("561909 타고 남은 잔액.");
+		System.out.println("561909ㅎ 타고 남은 잔액.");
 		lsystudent3.takekakaoTaxi(kakaotaxi);
 		System.out.println("561909 정보.");
 		lsystudent3.showInfo();
