@@ -2,8 +2,10 @@ package ch09_gamelevel_1021;
 
 public class Player {
 	
-	//Player 에 PlayerLevel 추상 클래스형으로 선언 함. 
+	//Player 에 PlayerLevel 추상 클래스형으로 선언 함.
+	// 포함 관계 hsa A 관계, 모든 클래스들의 관계가 무조건 상속인건 아님.
 	private PlayerLevel level;
+	private UltimateSkill ultimateskill;
 	
 	public Player()
 	{
@@ -25,5 +27,12 @@ public class Player {
 	
 	public void play(int count){
 		level.go(count);
+	}
+	
+	public void useUltimateSkill(UltimateSkill ultimateskill) {
+		
+        ultimateskill.showSkillInfo();
+		
+		
 	}
 }

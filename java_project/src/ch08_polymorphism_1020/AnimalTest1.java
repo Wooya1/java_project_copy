@@ -3,11 +3,43 @@ package ch08_polymorphism_1020;
 import java.util.ArrayList;
 
 class Animal{
+	
+	// 각자 좋아하는 동물 클래스를 만듭니다. ex)dog
+	// 각 동물들의 공통 기능, move, eat,
+	// 공통 기능 추가 소리나는 기능 추가. sound
+	// Animal 있고, 각 하위 클래스에서 재정의 해서 사용을 합니다.
+	// 좋아하는 동물 클래스를 move, eat, sound 실행해보기.
+	
+	
+	
+	
+	
 	public void move()
 	{
 		System.out.println("동물이 움직입니다.");
 	}
 }
+
+class Dog extends Animal{
+	public void move()
+	{
+		System.out.println("개가 네 발로 뜁니다. ");
+	}
+	
+	public void hunting()
+	{
+		System.out.println("개가 사냥을 합니다. ");
+	}
+	public void eat()
+	{
+		System.out.println("개가 먹이를 먹습니다. ");
+	}
+	public void sound()
+	{
+		System.out.println("개가 짖습니다. ");
+	}
+}
+
 
 class Human extends Animal{
 	public void move()
@@ -18,6 +50,14 @@ class Human extends Animal{
 	public void readBook()
 	{
 		System.out.println("사람이 책을 읽습니다. ");
+	}
+	public void eat()
+	{
+		System.out.println("사람이 밥을 먹습니다. ");
+	}
+	public void sound()
+	{
+		System.out.println("사람이 말을 합니다. ");
 	}
 }
 
@@ -31,6 +71,13 @@ class Tiger extends Animal{
 	{
 		System.out.println("호랑이가 사냥을 합니다. ");
 	}
+	public void eat()
+	{
+		System.out.println("호랑이가 고기를 먹습니다. ");
+	}public void sound()
+	{
+		System.out.println("호랑이가 포효합니다. ");
+	}
 }
 
 class Eagle extends Animal{
@@ -43,6 +90,14 @@ class Eagle extends Animal{
 	{
 		System.out.print("독수리가 날개를 쭉 펴고 멀리 날아갑니다");
 	}
+	public void eat()
+	{
+		System.out.println("독수리가 먹이를 먹습니다. ");
+	}
+	public void sound()
+	{
+		System.out.println("독수리가 짖습니다. ");
+	}
 }
 
 class Lsy extends Animal{
@@ -54,6 +109,14 @@ class Lsy extends Animal{
 	public void read() 
 	{
 		System.out.println("이상용 책 봄.");
+	}
+	public void eat()
+	{
+		System.out.println("상용이가 밥을 먹습니다. ");
+	}
+	public void sound()
+	{
+		System.out.println("상용이가 말을합니다. ");
 	}
 }
 
@@ -71,10 +134,19 @@ public class AnimalTest1 {
 		  aTest.moveAnimal(new Human());
 		  aTest.moveAnimal(new Tiger());
 		  aTest.moveAnimal(new Eagle());
+		
+		  
+		  Lsy lsy = new Lsy();
+		  aTest.moveAnimal(lsy);
+		 
 	 }
 
 	 public void moveAnimal(Animal animal) { //매개 변수의 자료형이 상위 클래스
 		  animal.move();                     //재정의 된 메서드 호출
+	 }   
+	 
+	 public void eatAnimal(Animal animal) { 
+		  animal.eat();                     
 	 }   
 
 }
