@@ -22,7 +22,7 @@ public class JDBC_Ex_DAO {
 	}
 
 	public ArrayList<JDBC_Ex_DTO> select() {
-		ArrayList<JDBC_Ex_DTO> list = new ArrayList<JDBC_Ex_DTO>();
+		ArrayList<JDBC_Ex_DTO> list = new ArrayList<JDBC_Ex_DTO>();/
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
